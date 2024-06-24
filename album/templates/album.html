@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+<form class="" style="width:50%; margin:auto" method = "GET"> 
+    <h1>Album Model </h2>
+    {% csrf_token %}
+    {{ form |crispy }} 
+    <a href="{% url "album" %}" class="btn btn-danger">Submit</a>
+</form> 
+{% endblock  %}
